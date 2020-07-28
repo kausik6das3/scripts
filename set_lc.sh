@@ -11,7 +11,8 @@ set_wallpaper(){
 	FILENAME=$(basename -- "$1")
 	EXTENSION="${FILENAME##*.}"
 	FILENAME="${FILENAME%.*}"
-		if [ "$EXTENSION" == "png" ] || [ "$EXTENSION" == "jpg" ]; then
+
+		if [ "$EXTENSION" == "png" ] || [ "$EXTENSION" == "jpg" ] || [ "$EXTENSION" == "jpeg" ] || [ "$EXTENSION" == "jpe" ]; then
 			magick convert "$1" -resize 27900x780 "$BG_LOC"&
 
 		else 

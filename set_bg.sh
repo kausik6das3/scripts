@@ -11,7 +11,7 @@ set_wallpaper(){
 	FILENAME=$(basename -- "$1")
 	EXTENSION="${FILENAME##*.}"
 	FILENAME="${FILENAME%.*}"
-		if [ "$EXTENSION" == "png" ] || [ "$EXTENSION" == "jpg" ]; then
+		if [ "$EXTENSION" == "png" ] || [ "$EXTENSION" == "jpg" ] || [ "$EXTENSION" == "jpeg" ] || [ "$EXTENSION" == "jpe" ]; then
 			cp "$1" $BG_LOC
 			xwallpaper --stretch $BG_LOC && notify-send -i $BG_LOC "Walpaper changed to" "$WALL"&
 		else 
