@@ -3,8 +3,15 @@
 # Author:Kausik Das.
 # Lisence: GNU General Public License v3.0.
 
-intern=LVDS1
-extern1=VGA1
-extern2=HDMI1
-xrandr --output "$intern" --auto --output "$extern1" --off --output "$extern2" --off
-notify-send "$intern Only."
+int=LVDS1
+ext1=VGA1
+ext2=HDMI1
+yes=/home/kausik/Linux_packages/scripts/mon.png
+no=/home/kausik/Linux_packages/scripts/worn.png
+
+setscreen(){
+	xrandr --output "$int" --auto --output "$ext1" --off --output "$ext2" --off
+	notify-send -i $yes "$int Only."
+}
+
+setscreen

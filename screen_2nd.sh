@@ -3,17 +3,24 @@
 # Author:Kausik Das.
 # Lisence: GNU General Public License v3.0.
 
-intern=LVDS1
-extern1=VGA1
-extern2=HDMI1
-if [ ! -z "$(xrandr | grep "$extern1 connected")" ]; then
-	xrandr --output "$intern" --off --output "$extern1" --auto
-	notify-send "$extern1 Only ."
+int=LVDS1
+ext1=VGA1
+ext2=HDMI1
+yes=/home/kausik/Linux_packages/scripts/mon.png
+no=/home/kausik/Linux_packages/scripts/worn.png
 
-elif [ ! -z "$(xrandr | grep "$extern2 connected")" ]; then
-	xrandr --output "$intern" --off --output "$extern2" --auto
-	notify-send "$extern2 Only ."
+setscreen(){
+	xrandr --output "$int" --off --output "$external" --auto
+	notify-send -i $yes "$external Only."
+}
+
+if [ ! -z "$(xrandr | grep "$ext1 connected")" ]; then
+	external="$ext1"
+	setscreen
+elif [ ! -z "$(xrandr | grep "$ext2 connected")" ]; then
+	external="$ext2"
+	setscreen
 else
-	notify-send "ERROR: No External Monitor Detected."
+	notify-send -i $no "ERROR: No External Monitor Detected."
 fi &
 
