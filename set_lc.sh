@@ -4,7 +4,7 @@
 # Lisence: GNU General Public License v3.0
 # 
 INPUT1=$1
-BG_LOC=/home/kausik/.local/share/lc.png
+BG_LOC=~/.local/share/lc.png
 
 set_wallpaper(){
 #use "" for handeling space (test\ file.jpg) in argument

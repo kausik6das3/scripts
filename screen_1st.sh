@@ -6,8 +6,8 @@
 int=LVDS1
 ext1=VGA1
 ext2=HDMI1
-yes=/home/kausik/Linux_packages/scripts/mon.png
-no=/home/kausik/Linux_packages/scripts/worn.png
+yes=~/Linux_packages/scripts/mon.png
+no=~/Linux_packages/scripts/worn.png
 
 setscreen(){
 	xrandr --output "$int" --auto --output "$ext1" --off --output "$ext2" --off
