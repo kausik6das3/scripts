@@ -2,12 +2,12 @@
 # To set secoundary monitor extended right to primary nonitor.
 # Author:Kausik Das.
 # Lisence: GNU General Public License v3.0.
-
+dir=~/Packages/scripts
 int=LVDS1
 ext1=VGA1
 ext2=HDMI1
-yes=~/Linux_packages/scripts/mon.png
-no=~/Linux_packages/scripts/worn.png
+yes="$dir"/mon.png
+no="$dir"/worn.png
 
 setscreen(){
 	xrandr --output "$int" --auto --output "$external" --auto --right-of "$int"
