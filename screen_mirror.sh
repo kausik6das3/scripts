@@ -1,7 +1,7 @@
 #!/bin/bash
 # To set mirror display.
 # Author:Kausik Das.
-# Lisence: GNU General Public License v3.0.
+# Lisence: GNU General Public License v2.
 dir=~/Packages/scripts
 int=LVDS1
 ext1=VGA1

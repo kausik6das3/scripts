@@ -13,7 +13,7 @@ set_wallpaper(){
 	FILENAME="${FILENAME%.*}"
 		if [ "$EXTENSION" == "png" ] || [ "$EXTENSION" == "jpg" ] || [ "$EXTENSION" == "jpeg" ] || [ "$EXTENSION" == "jpe" ]; then
 			cp "$1" $BG_LOC
-			xwallpaper --stretch $BG_LOC && notify-send -i $BG_LOC "Walpaper changed to" "$WALL"&
+			xwallpaper --stretch $BG_LOC && notify-send -i $BG_LOC "Walpaper changed to" "$1"&
 		else 
 			echo "$1" is not an suported image file.
 		fi 
