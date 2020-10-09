@@ -10,7 +10,7 @@ yes="$dir"/mon.png
 no="$dir"/worn.png
 
 setscreen(){
-	xrandr --output "$int" --auto --output "$external" --left-of "$int" --auto
+	xrandr --output "$int" --auto --output "$external" --left-of "$int" --primary --auto
 	notify-send -i $yes "Set $external Left of $int ."
 }
 

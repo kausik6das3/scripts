@@ -10,7 +10,7 @@ yes="$dir"/mon.png
 no="$dir"/worn.png
 
 setscreen(){
-	xrandr --output "$int" --off --output "$external" --auto
+	xrandr --output "$int" --off --output "$external" --primary --auto
 	notify-send -i $yes "$external Only."
 }
 

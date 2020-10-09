@@ -10,7 +10,7 @@ yes="$dir"/scripts/mon.png
 no="$dir"/scripts/worn.png
 
 setscreen(){
-	xrandr --output "$int" --auto --output "$ext1" --off --output "$ext2" --off
+	xrandr --output "$int" --primary --auto --output "$ext1" --off --output "$ext2" --off
 	notify-send -i $yes "$int Only."
 }
 
