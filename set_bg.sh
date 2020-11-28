@@ -1,7 +1,7 @@
 #!/bin/bash
 # To set walpaper.
 # Author:Kausik Das.
-# Lisence: GNU General Public License v3.0
+# Lisence: GNU General Public License v2
 #  
 INPUT1=$1
 BG_LOC=~/.local/share/bg
