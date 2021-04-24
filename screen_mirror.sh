@@ -10,7 +10,7 @@ yes="$dir"/mon.png
 no="$dir"/worn.png
 
 setscreen(){
-	xrandr --output "$int" --auto --output "$external" --same-as "$int" --auto
+	xrandr --output "$int" --auto --output "$ext1" --same-as "$int" --auto
 	notify-send -i $yes "$external Mirrored to $int ."
 
 }

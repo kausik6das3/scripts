@@ -11,6 +11,7 @@ no="$dir"/worn.png
 
 setscreen(){
 	xrandr --output "$int" --off --output "$external" --primary --auto
+	xwallpaper --stretch ~/.local/share/bg
 	notify-send -i $yes "$external Only."
 }
 
